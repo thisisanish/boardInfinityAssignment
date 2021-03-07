@@ -22,10 +22,12 @@ const todoSchema = new mongoose.Schema({
         required: true
      },
     expiresAt:{
-        type:Date,    
+        type:Date,
+        
     }
 })
 
+// Deletes the doc after a set expiration time (Via Duration).)
 todoSchema.index( { "expiresAt": 1 }, { expireAfterSeconds: 0 } )
 
 module.exports = mongoose.model("Todo",todoSchema)
