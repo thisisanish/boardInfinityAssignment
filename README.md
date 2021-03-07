@@ -33,4 +33,6 @@ To run this app, clone the app and run the following commands on the root of thi
 	"duration":5
    }
     ```
-      
+The task would be deleted automatically with the help of mongo's ttl feature after a set duration (5 minutes in our example data).
+
+

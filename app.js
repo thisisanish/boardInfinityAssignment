@@ -21,6 +21,9 @@ mongoose.connect("mongodb+srv://thisisanish:"+MONGO_PWD+"@cluster0.9myph.mongodb
 app.use(express.json())
 
 // All routing is handled by todoRoutes
+app.get("/", (req,res)=>{
+    res.json({'message':"Visit /list via GET or /add via POST method. Thankyou"})
+})
 app.use("/",todoRoutes)
 
 // listening on PORTw
